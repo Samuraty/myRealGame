@@ -15,6 +15,7 @@ function updateCanvas() {
     player.draw();
     player.move();
     platform.otherPlatform(player);
+    platform.shift();
 
 }
 
