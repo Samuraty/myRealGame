@@ -4,8 +4,8 @@ var ctx = canvas.getContext("2d");
 function Obstacle(){
   this.img = new Image();
   this.img.src = "./Images/obstacle.png";
-  this.x = -100;
-  this.y = Math.random()*600;
+  this.x = Math.random()*500;
+  this.y = -50;
   this.vx = 0; 
   this.vy = 0;
   this.speed = 0.02; // obstacle velocity
@@ -19,10 +19,9 @@ Obstacle.prototype.draw = function() {
 }
 
 Obstacle.prototype.move = function() {
-  this.vx += this.speed;
-  this.x += this.vx;
-  if (this.x > 3000) obstacle = new Obstacle();
-
+  this.vy += this.speed;
+  this.y += this.vy;
+  if (this.y > 800) obstacle = new Obstacle();
 }
 
 var obstacle = new Obstacle();
