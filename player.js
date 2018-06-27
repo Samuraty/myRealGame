@@ -21,29 +21,13 @@ Player.prototype.move = function() {
   //jump
   this.vy += 0.05;
   this.y += this.vy;
-  if(this.y > 700) {
-    this.vy -= this.gravity;
+  this.x += this.vx; //left & right
+  if(this.x < 0) { // left side of player cannot go above 0
+    this.x = 0;
   }
-  //left & right
-  that = this;
-  document.onkeydown = function(event) {  //key pushed
-    if (event.keyCode === 37) { // left pushed
-      that.vx = -3;
-    }
-    if (event.keyCode === 39) { // right pushed
-      that.vx = +3; 
-    }
+  if(this.x + this.width > canvas.width) {  // right side of player cannot go beyond canvas width
+    this.x = canvas.width -this.width;
   }
-  document.onkeyup = function(event) {  //key released
-    if (event.keyCode === 37) { // left released
-      that.vx = 0; 
-    }
-    if (event.keyCode === 39) { // right released
-      that.vx = 0; 
-    }  
-  }
-  this.x += this.vx;  // update position
-
 }
 
 var player = new Player();
