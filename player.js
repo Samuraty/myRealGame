@@ -4,17 +4,17 @@ var ctx = canvas.getContext("2d");
 function Player(){
     this.img = new Image();
     this.img.src = "./Images/boo.png";
-    this.x = 120;
-    this.y = 120;
+    this.x = 100;
+    this.y = 450;
     this.vx = 0;
     this.vy = 0;
     this.gravity = 3.85;
     this.width = 120;
     this.heigth = 120;
-    this.draw = function() {
-        ctx.drawImage(this.img, this.x, this.y, this.width, this.heigth); 
-    }
-    
+}
+
+Player.prototype.draw = function() {
+  ctx.drawImage(this.img, this.x, this.y, this.width, this.heigth); 
 }
 
 Player.prototype.move = function() {
