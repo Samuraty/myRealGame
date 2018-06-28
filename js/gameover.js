@@ -7,10 +7,15 @@ function Gameover(){
   this.x = 150;
   this.y = 320;
   this.size = 300;
+  this.img2 = new Image();
+  this.img2.src = "./Images/GameoverBack.jpg"
 }
 
 Gameover.prototype.show = function() {
   sounds.gameoverAudio.play();
+  ctx.globalAlpha = 0.5; //opacidad imagen fondo del gameover
+  ctx.drawImage(this.img2, 0, 0, 600, 700);
+  ctx.globalAlpha = 1;
   ctx.font = 'bold 120px serif';
   ctx.fillStyle = 'black';
   ctx.fillText("GAME", 50, 150);
