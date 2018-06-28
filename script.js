@@ -24,8 +24,8 @@ function updateCanvas() {
 
 function startGame() {
   document.getElementById("start-button").disabled = true;
-  platform.create();
-  var interval = setInterval(function(){
+  platform.create(); // creo el array de plataformas solo una vez, fuera del updateCanvas!
+  var interval = setInterval(function(){ // setInterval donde miro si el canvas sigue actualizandose o si va a haber GameOver
     if ((player.y > 700) || 
      ((obstacle.x <= this.player.x + 40 &&
      this.player.x + 40 <= obstacle.x + 80) ||
@@ -53,6 +53,7 @@ function resetGame() {
   candies = new Candies();
 }
 
+// TECLAS
 document.onkeydown = function(event) {  //key pushed
   if (event.keyCode === 37) { // left pushed
     player.vx = -3;

@@ -3,11 +3,11 @@ var ctx = canvas.getContext("2d");
 
 function Platform() {
   this.img = new Image();
-  this.counter = 0;  // contador de las veces que salto (para score)
   this.img.src = "./Images/Platform.png";
   this.y = 600;
   this.xArray = [];
   this.yArray = [];
+  this.counter = 0;  // contador de las veces que salto (para score)
 }
 
 Platform.prototype.create = function() {
@@ -27,12 +27,11 @@ Platform.prototype.generate = function(player) {
   this.player = player;
   for (var i = 0; i < this.xArray.length; i++) {  //me meto en cada uno de los obstaculos generados antes para poder dibujarlos
     ctx.drawImage(this.img, this.xArray[i], this.yArray[i], 160, 50);
-    if (
-      ((this.player.x + 25 >= this.xArray[i] && // "colisiones" con plataformas
+    if (((this.player.x + 25 >= this.xArray[i] && // "colisiones" con plataformas
       this.player.x + 25 <= this.xArray[i] + 160) ||
       (this.player.x + this.player.width >= this.xArray[i] &&
       this.player.x + this.player.width <= this.xArray[i] + 160)) &&
-      this.player.y - 12 + this.player.heigth <= this.yArray[i] + 1 &&
+      this.player.y - 12 + this.player.heigth <= this.yArray[i] + 1 && // nunca va a ser === a yArray por los decimales, asi que le hago que este entre -1 y +1 pixel de y
       this.player.y - 12 + this.player.heigth >= this.yArray[i] - 1 &&
       this.player.vy >= 0) {
         this.player.vy = -3.5; // velocidad negativa para que el personaje salte cuando toque a la plataforma

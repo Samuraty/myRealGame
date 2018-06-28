@@ -5,7 +5,7 @@ function Score() {
   this.draw = function() {
     ctx.font = 'bold 30px serif';
     ctx.fillStyle = 'black';
-    ctx.fillText('Score: '+ Math.floor(platform.counter), 460, 30);
+    ctx.fillText('Score: '+ platform.counter, 460, 30);
   }
 }
 var score = new Score();

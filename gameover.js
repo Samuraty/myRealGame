@@ -6,6 +6,7 @@ function Gameover(){
   this.img.src = "./Images/gameover.png";
   this.x = 150;
   this.y = 320;
+  this.size = 300;
 }
 
 Gameover.prototype.show = function() {
@@ -13,7 +14,7 @@ Gameover.prototype.show = function() {
   ctx.fillStyle = 'black';
   ctx.fillText("GAME", 50, 150);
   ctx.fillText("OVER", 190, 300);
-  ctx.drawImage(this.img, this.x, this.y, 300, 300);
+  ctx.drawImage(this.img, this.x, this.y, this.size, this.size);
   document.getElementById("start-button").disabled = false; // reactivo el boton de start game para volver a jugar
 }
 

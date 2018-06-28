@@ -6,12 +6,10 @@ function Obstacle(){
   this.img.src = "./Images/obstacle.png";
   this.x = Math.random()*500;
   this.y = -50;
-  this.vx = 0; 
   this.vy = 0;
-  this.speed = 0.02; // acceleracion de la bola
+  this.speed = 0.03; // aceleracion de la bola
   this.width = 100;
   this.heigth = 100;
-   
 }
 
 Obstacle.prototype.draw = function() {
@@ -19,9 +17,9 @@ Obstacle.prototype.draw = function() {
 }
 
 Obstacle.prototype.move = function() {
-  this.vy += this.speed;
-  this.y += this.vy;
-  if (this.y > 800){
+  this.vy += this.speed; // acelero la bola (la velocidad va aumentando)
+  this.y += this.vy; // muevo la bola cada vez mas deprisa
+  if (this.y > 800){ // si se sale de pantalla que me cree otra
     obstacle = new Obstacle();  
   }
 }
