@@ -26,20 +26,25 @@ button {
 .lefttext {
   padding-top: 90px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 30px;
+  font-family: 'Poor Story', cursive;
 }
 
 .gameTitle {
   font-size: 80px;
   padding-top: 100px;
+  font-family: 'Fredericka the Great', cursive;
 }
 
 .textindex {
-  font-size: 20px;
-  padding: 8px 0;
+  font-size: 30px;
+  padding: 50px 0;
+  font-weight: bold;
+  font-family: 'Poor Story', cursive;
 }
 
 .startbtn {
+  font-family: 'Poor Story', cursive;
   font-size: 35px;
   text-decoration: none;
   background-color: #31D97D;
@@ -50,6 +55,7 @@ button {
 }
 
 .button1 {
+  font-family: 'Poor Story', cursive;
   padding: 5px;
   background:#31D97D;
   border: 2px solid black;
