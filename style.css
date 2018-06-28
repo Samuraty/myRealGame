@@ -1,8 +1,5 @@
 canvas {
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0 auto;
-  display: block;
+  margin: 0 350px; 
 }
 
 #start-button {
@@ -10,18 +7,30 @@ canvas {
   font-size: 24px;
 }
 
-body {
+#cover {
   background: pink;
   text-align: center;
 }
 
 h1 {
   font-size: 100px;
-  
 }
 
 a {
   font-size: 35px;
   text-decoration: none;
+  background-color: #31D97D;
+  color: black;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
+p {
+  font-size: 20px;
+  padding: 5px 0;
+}
+
+/*#game-board {
+  background-image: url("")
+}*/
