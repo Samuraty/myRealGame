@@ -10,6 +10,10 @@ button {
 #cover {
   background: pink;
   text-align: center;
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("./Images/Wiki-background.jpg");
 }
 
 #game-board {
