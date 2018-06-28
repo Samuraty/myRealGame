@@ -24,6 +24,7 @@ Candies.prototype.draw = function() {
     player.y + 30 <= this.y + this.heigth) || // top side of bu (y) between object y coordinates (y, y+heigth)
     (this.y <= player.y + player.heigth  && 
     player.y + player.heigth<= this.y + this.heigth))) { // bottom side of bu (y+heigth) between object y coordinates (y,y+heigth)
+      sounds.coinsAudio.play();
       platform.counter += 5;   
       candies = new Candies(); 
   }

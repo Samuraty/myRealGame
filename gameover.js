@@ -10,6 +10,7 @@ function Gameover(){
 }
 
 Gameover.prototype.show = function() {
+  sounds.gameoverAudio.play();
   ctx.font = 'bold 120px serif';
   ctx.fillStyle = 'black';
   ctx.fillText("GAME", 50, 150);
