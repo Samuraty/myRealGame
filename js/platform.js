@@ -19,7 +19,7 @@ Platform.prototype.create = function() {
   //AND THE REST ARE FILLED RANDOMLY
   for (var i = 2; i < 10; i++) {
     this.xArray.push(Math.random() * 440);
-    this.yArray.push(this.y - i * 100); //400, 300, 200, 100, 0, -100...
+    this.yArray.push(this.y - i * 100); //400, 300, 200, 100, 0, -100...equidistantes
   }
 };
 
